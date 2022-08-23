@@ -1,5 +1,5 @@
 # Latest Stable-Diffusion model 
-![](C:\Users\HardWorkingStation\PyProjects\stabe_diffusion_github_version\images\web_page.png)
+![Stable-Diffusion app](/images/web_page.png)
 
 ### Manual
 
@@ -32,8 +32,8 @@ streamlit run path_to_app.py
 ```
 
 ---
-based on: Streamlit
-update: 23.08.2022
----
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+| based on: | Streamlit  |
+|-----------|------------|
+| update:   | 23.08.2022 |
+
