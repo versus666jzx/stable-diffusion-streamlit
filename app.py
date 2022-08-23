@@ -7,7 +7,7 @@ from torch import autocast
 from diffusers import StableDiffusionPipeline
 
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 st.title('Play with Stable-Diffusion v1-4')
 
