@@ -40,10 +40,7 @@ def infer(prompt, samples=2, steps=30, scale=7.5, seed=25):
 			generator=generator
 		)
 
-	images = []
-	for image in images_list["sample"]:
-		images.append(image)
-	return images
+	return images_list["sample"]
 
 
 with st.form(key='new'):
@@ -73,15 +70,19 @@ with st.form(key='new'):
 
 	st.form_submit_button()
 
-if prompt:
-	st.image(
-		infer(
+	if prompt:
+		images = infer(
 			prompt,
 			samples=n_samples,
 			steps=steps,
 			scale=scale
-		),
-		caption='result'
-	)
-else:
-	st.warning('Enter prompt.')
+		)
+
+		for image in images:
+			st.image(image)
+		with torch.no_grad():
+			torch.cuda.empty_cache()
+			pipe.to('cpu')
+			pipe = None
+	else:
+		st.warning('Enter prompt.')
