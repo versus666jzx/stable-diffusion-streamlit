@@ -19,6 +19,8 @@ from huggingface_hub import notebook_login
 notebook_login()
 ```
 
+In this post we'll use model version v1-4, so before use you'll need to visit [this card](https://huggingface.co/CompVis/stable-diffusion-v1-4), read the license and tick the checkbox if you agree.
+
 2. Install requirements
 
 ```bash
