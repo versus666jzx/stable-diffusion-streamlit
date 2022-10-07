@@ -89,6 +89,7 @@ streamlit==1.12.0
 tokenizers==0.12.1
 toml==0.10.2
 toolz==0.12.0
+--extra-index-url https://download.pytorch.org/whl/cu116
 torch==1.12.1+cu116
 tornado==6.2
 tqdm==4.64.0
